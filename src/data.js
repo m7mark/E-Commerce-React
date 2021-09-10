@@ -1,82 +1,93 @@
 import slide1 from './assets/Slider/1.png';
 import slide2 from './assets/Slider/2.png';
 import slide3 from './assets/Slider/3.png';
+import c1 from './assets/Category/c1.jpeg';
+import c2 from './assets/Category/c2.jpeg';
+import c3 from './assets/Category/c3.jpeg';
+import p1 from './assets/Products/p1.png';
+import p2 from './assets/Products/p2.png';
+import p3 from './assets/Products/p3.png';
+import p4 from './assets/Products/p4.png';
+import p5 from './assets/Products/p5.png';
+import p6 from './assets/Products/p6.png';
+import p7 from './assets/Products/p7.png';
+import p8 from './assets/Products/p8.png';
 
 
 
 export const sliderItems = [
     {
-      id: 1,
-      img: slide1,
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+        id: 1,
+        img: slide1,
+        title: "SUMMER SALE",
+        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+        bg: "f5fafd",
     },
     {
-      id: 2,
-      img: slide2,
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
+        id: 2,
+        img: slide2,
+        title: "AUTUMN COLLECTION",
+        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+        bg: "fcf1ed",
     },
     {
-      id: 3,
-      img: slide3,
-      title: "LOUNGEWEAR LOVE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fbf0f4",
+        id: 3,
+        img: slide3,
+        title: "LOUNGEWEAR LOVE",
+        desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+        bg: "fbf0f4",
     },
-  ];
+];
 
-  export const categories = [
+export const categories = [
     {
-      id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "SHIRT STYLE!",
+        id: 1,
+        img: c1,
+        title: "SHIRT STYLE!",
     },
     {
-      id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
+        id: 2,
+        img: c2,
+        title: "LOUNGEWEAR LOVE",
     },
     {
-      id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
+        id: 3,
+        img: c3,
+        title: "LIGHT JACKETS",
     },
-  ];
+];
 
-  export const popularProducts = [
+export const popularProducts = [
     {
-      id:1,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png",
+        id: 1,
+        img: p1,
     },
     {
-      id:2,
-      img:"https://cdn.shopify.com/s/files/1/0101/4832/products/Angela_Natural_Tee.png?v=1606780388",
+        id: 2,
+        img: p2,
     },
     {
-      id:3,
-      img:"https://www.prada.com/content/dam/pradanux_products/U/UCS/UCS319/1YOTF010O/UCS319_1YOT_F010O_S_182_SLF.png",
+        id: 3,
+        img: p3,
     },
     {
-      id:4,
-      img:"https://www.burdastyle.com/pub/media/catalog/product/cache/7bd3727382ce0a860b68816435d76e26/107/BUS-PAT-BURTE-1320516/1170x1470_BS_2016_05_132_front.png",
+        id: 4,
+        img: p4,
     },
     {
-      id:5,
-      img:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
+        id: 5,
+        img: p5,
     },
     {
-      id:6,
-      img:"https://d3o2e4jr3mxnm3.cloudfront.net/Rocket-Vintage-Chill-Cap_66374_1_lg.png",
+        id: 6,
+        img: p6,
     },
     {
-      id:7,
-      img:"https://www.vintageindustries.nl/download_front/qympzk1762/2217_Arrow_Jacket_Forest.png",
+        id: 7,
+        img: p7,
     },
     {
-      id:8,
-      img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
+        id: 8,
+        img: p8,
     },
-  ]
+]
