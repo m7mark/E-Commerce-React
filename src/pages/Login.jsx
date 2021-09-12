@@ -49,7 +49,7 @@ const Button = styled.button`
     cursor: pointer;
   `
 
-const Register = () => {
+const Login = () => {
   return (
     <Container>
       <Wrapper>
@@ -68,4 +68,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;
