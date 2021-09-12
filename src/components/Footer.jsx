@@ -1,9 +1,12 @@
 import { Facebook, Instagram, MailOutline, Phone, Room, Twitter } from '@material-ui/icons';
 import styled from 'styled-components';
 import payment from '../assets/payment.png';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
     display: flex;
+    ${mobile({flexDirection: "column"})}
+
 `
 const Left = styled.div`
     flex: 1;
@@ -35,6 +38,8 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({display: "none"})}
+    
 `
 const Title = styled.h3`
     margin-bottom: 20px;
@@ -53,6 +58,8 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+    ${mobile({backgroundColor: "#fcf5f5"})}
+
 
 `
 const ContactItem = styled.div`
