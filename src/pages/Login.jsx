@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { mobile } from "../responsive";
+import styled from 'styled-components';
+
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   width: 100vw;
@@ -51,7 +52,7 @@ const Button = styled.button`
     cursor: pointer;
   `
 
-const Login = () => {
+export const Login = () => {
   return (
     <Container>
       <Wrapper>
@@ -69,5 +70,3 @@ const Login = () => {
     </Container>
   );
 };
-
-export default Login;

@@ -1,26 +1,42 @@
-import Product from "./pages/Product";
-import Home from "./pages/Home";
-import ProductList from "./pages/ProductList";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
-import Cart from "./pages/Cart";
-import { Route, Router, Switch } from "react-router";
-import Pay from "./components/Payment/Pay";
-import Success from "./components/Payment/Success";
-import { BrowserRouter } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Redirect,
+  Route,
+  Switch,
+} from 'react-router-dom';
+
+import { Cart } from './pages/Cart';
+import { Home } from './pages/Home';
+import { Login } from './pages/Login';
+import { Product } from './pages/Product';
+import { ProductList } from './pages/ProductList';
+import { Register } from './pages/Register';
 
 const App = () => {
+  const user = true
   return (
-    <BrowserRouter>
+    <Router>
       <Switch>
-        <Route path="/pay">
-          <Pay />
+        <Route path="/" exact>
+          <Home />
         </Route>
-        <Route path="/success">
-          <Success />
+        <Route path="/products/:category">
+          <ProductList />
+        </Route>
+        <Route path="/product/:id">
+          <Product />
+        </Route>
+        <Route path="/cart">
+          <Cart />
+        </Route>
+        <Route path="/login">
+          {user ? <Redirect to='/' /> : <Login />}
+        </Route>
+        <Route path="/register">
+          {user ? <Redirect to='/' /> : <Register />}
         </Route>
       </Switch>
-    </BrowserRouter>
+    </Router>
   )
 };
 

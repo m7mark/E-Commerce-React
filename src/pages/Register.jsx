@@ -1,5 +1,6 @@
-import styled from "styled-components";
-import { mobile } from "../responsive";
+import styled from 'styled-components';
+
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   width: 100vw;
@@ -19,7 +20,7 @@ const Wrapper = styled.div`
   padding: 20px;
   width: 40%;
   background-color: white;
-  ${mobile({width: "75%"})}
+  ${mobile({ width: "75%" })}
 `
 const Title = styled.h1`
   font-style: 24px;
@@ -48,7 +49,7 @@ const Button = styled.button`
   cursor: pointer;
 `
 
-const Register = () => {
+export const Register = () => {
   return (
     <Container>
       <Wrapper>
@@ -70,5 +71,3 @@ const Register = () => {
     </Container>
   );
 };
-
-export default Register;
