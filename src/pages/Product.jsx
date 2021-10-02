@@ -3,6 +3,7 @@ import {
   useState,
 } from 'react';
 
+import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router';
 import styled from 'styled-components';
 
@@ -15,6 +16,7 @@ import { Announcement } from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
+import { addProduct } from '../redux/cartRedux';
 import { publicRequest } from '../requestMethods';
 import { mobile } from '../responsive';
 
@@ -120,6 +122,8 @@ export const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState('');
   const [size, setSize] = useState('');
+  const dispatch = useDispatch()
+
 
   const handleQuantity = (type) => {
     if (type === 'dec') {
@@ -129,7 +133,7 @@ export const Product = () => {
     }
   }
   const handleClick = () => {
-    
+    dispatch(addProduct({ ...product, quantity, color, size }))
   }
 
   useEffect(() => {
@@ -158,7 +162,7 @@ export const Product = () => {
             <Filter>
               <FilterTitle>Color:</FilterTitle>
               {product.color?.map((c) => (
-                <FilterColor color={c} key={c} onClick={() => setColor(c)}/>
+                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
               ))}
             </Filter>
             <Filter>
