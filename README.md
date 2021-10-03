@@ -1,1 +1,1 @@
-## In Developing
+## In Developing - MERN e-commerce-app
