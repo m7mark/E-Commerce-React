@@ -8,6 +8,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import { Products } from '../components/Products';
+import ScrollToTop from '../components/ScrollToTop';
 import { mobile } from '../responsive';
 
 const Container = styled.div``
@@ -49,6 +50,7 @@ export const ProductList = () => {
 
   return (
     <Container>
+      <ScrollToTop />
       <Announcement />
       <Navbar />
       <Title>{cat}</Title>
@@ -82,7 +84,7 @@ export const ProductList = () => {
           </Select>
         </Filter>
       </FilterContainer>
-      <Products cat={cat} filters={filters} sort={sort}/>
+      <Products cat={cat} filters={filters} sort={sort} />
       <Newsletter />
       <Footer />
     </Container>

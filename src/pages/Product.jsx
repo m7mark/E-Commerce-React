@@ -16,6 +16,7 @@ import { Announcement } from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
+import ScrollToTop from '../components/ScrollToTop';
 import { addProduct } from '../redux/cartSlice';
 import { publicRequest } from '../requestMethods';
 import { mobile } from '../responsive';
@@ -148,6 +149,7 @@ export const Product = () => {
 
   return (
     <Container>
+      <ScrollToTop />
       <Announcement />
       <Navbar />
       <Wrapper>

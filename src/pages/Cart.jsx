@@ -16,6 +16,7 @@ import {
 import { Announcement } from '../components/Announcement';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import ScrollToTop from '../components/ScrollToTop';
 import { userRequest } from '../requestMethods';
 import { mobile } from '../responsive';
 
@@ -177,6 +178,7 @@ export const Cart = () => {
 
   return (
     <Container>
+      <ScrollToTop />
       <Navbar />
       <Announcement />
       <Wrapper>
