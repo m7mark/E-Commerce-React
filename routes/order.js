@@ -43,7 +43,7 @@ router.get("/find/:userId", verifyTokenAndAuth, async (req, res) => {
 //GET ALL ORDERS
 router.get("/", verifyTokenAndAdmin, async (req, res) => {
   try {
-    const allOrders = await Card.find()
+    const allOrders = await Order.find()
     res.status(200).json(allOrders);
   } catch (err) { res.status(500), json(err) }
 })
