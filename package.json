@@ -1,12 +1,13 @@
 {
   "name": "e-commerce-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "E-commerce MERN app",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "heroku-postbuild": "cd admin && npm install && npm run build"
   },
-  "author": "",
+  "author": "Mark Rodovsky",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
