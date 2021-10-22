@@ -17,7 +17,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Newsletter from '../components/Newsletter';
 import ScrollToTop from '../components/ScrollToTop';
-import { addProduct } from '../redux/cartSlice';
+import { addProductToCart } from '../redux/cartSlice';
 import { publicRequest } from '../requestMethods';
 import { mobile } from '../responsive';
 
@@ -28,13 +28,15 @@ const Wrapper = styled.h1`
   ${mobile({ padding: "10px", flexDirection: "column" })}
 `
 const ImgContainer = styled.div`
-  flex:1;    
+  flex:1;
 `
 const Image = styled.img`
   width: 100%;
-  height: 90vh;
-  object-fit: cover;
-  ${mobile({ height: "40vh" })}
+  height: 80vh;
+  margin-left: 10px;
+  object-fit: contain;
+  object-position: left top;
+  ${mobile({ height: "50vh" })}
 `
 const InfoContainer = styled.div`
   flex: 1;
@@ -126,6 +128,7 @@ export const Product = () => {
   const dispatch = useDispatch()
 
 
+
   const handleQuantity = (type) => {
     if (type === 'dec') {
       quantity > 1 && setQuantity(quantity - 1)
@@ -133,8 +136,9 @@ export const Product = () => {
       setQuantity(quantity + 1)
     }
   }
+
   const handleClick = () => {
-    dispatch(addProduct({ ...product, quantity, color, size }))
+    dispatch(addProductToCart({ ...product, quantity, color, size }))
   }
 
   useEffect(() => {

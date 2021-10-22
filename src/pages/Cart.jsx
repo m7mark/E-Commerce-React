@@ -3,7 +3,7 @@ import {
   useState,
 } from 'react';
 
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import StripeCheckout from 'react-stripe-checkout';
 import styled from 'styled-components';
@@ -19,6 +19,7 @@ import Navbar from '../components/Navbar';
 import ScrollToTop from '../components/ScrollToTop';
 import { userRequest } from '../requestMethods';
 import { mobile } from '../responsive';
+import { deleteAllCart } from '../redux/cartSlice';
 
 const Container = styled.div`
 `
@@ -152,6 +153,7 @@ const Button = styled.button`
   font-weight: 600;
 `
 export const Cart = () => {
+  const dispatch = useDispatch()
   const KEY = process.env.REACT_APP_KEY_STRIPE;
   const cart = useSelector(state => state.cart)
   const [stripeToken, setStripeToken] = useState(null);
@@ -159,6 +161,10 @@ export const Cart = () => {
     setStripeToken(token)
   }
   const history = useHistory()
+
+  const checkoutClick = () => {
+    dispatch(deleteAllCart())
+  }
 
   useEffect(() => {
     const makeRequest = async () => {
@@ -189,7 +195,7 @@ export const Cart = () => {
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Ypur Wishlist</TopText>
           </TopTexts>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          <TopButton type="filled" onClick={checkoutClick}>CHECKOUT NOW</TopButton>
         </Top>
         <Bottom>
           <Info>
