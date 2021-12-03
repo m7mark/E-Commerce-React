@@ -16,7 +16,7 @@ export const Home = () => {
       <Announcement />
       <Navbar />
       <Slider />
-      <Categories />
+      <Categories id='shopNow' />
       <Products />
       <Newsletter />
       <Footer />
