@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
-import App from './App';
+import { AppInitialize } from './AppInitialize';
 import {
   persistor,
   store,
@@ -13,7 +13,7 @@ import {
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <App />
+      <AppInitialize />
     </PersistGate>
   </Provider>,
   document.getElementById('root')

@@ -93,10 +93,10 @@ const Navbar = () => {
         </Center>
         <Right>
           <LinkTo to={'/login'}>
-            <MenuItem>Register</MenuItem>
+            <MenuItem>Sign In</MenuItem>
           </LinkTo>
           <LinkTo to={'/register'}>
-            <MenuItem>Sign in</MenuItem>
+            <MenuItem>Register</MenuItem>
           </LinkTo>
           <Link to='/cart'>
             <MenuItem>
