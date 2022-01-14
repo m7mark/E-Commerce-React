@@ -10,6 +10,7 @@ const ordersRoute = require("./routes/orders")
 const stripeRoute = require("./routes/stripe")
 const cors = require("cors")
 const path = require('path');
+const PORT = process.env.PORT || 5000
 
 dotenv.config()
 mongoose
@@ -32,6 +33,6 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/admin/build', 'index.html'));
 });
 
-app.listen(process.env.PORT || 5000, () => {
-  console.log("Starting backend");
+app.listen(PORT, () => {
+  console.log(`Starting backend on port ${PORT}`);
 })
